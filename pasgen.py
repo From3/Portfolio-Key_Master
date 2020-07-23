@@ -49,14 +49,14 @@ while __name__ == '__main__':
 				continue
 			t -= 1
 		input_console = input('Press "Enter" to run again or type in "B" and press "Enter" to go back\n')
-		if input_console == 'b' or input_console == 'B':
+		if input_console.upper() == 'B':
 			break
 		else:
 			continue
 
 	while task == 'C':
 		input_console = input('\nEnter the password you want to check and press "Enter" or type in "B" and press "Enter" to go back\n: ')
-		if input_console == 'b' or input_console == 'B':
+		if input_console.upper() == 'B':
 			break
 		check = main_check(input_console)
 		if check:
