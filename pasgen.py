@@ -1,3 +1,4 @@
+# This code generates passwords and checks if passwords were leaked by using "have i been pwned" API
 import requests
 import hashlib
 from random import randint, choice
@@ -5,6 +6,7 @@ import string
 
 
 def request_list(request_input):
+	# sends a slice of hashed password to API in order to get a list of similar hashes
 	url = 'https://api.pwnedpasswords.com/range/' + request_input
 	res = requests.get(url)
 	if res.status_code != 200:
@@ -13,6 +15,7 @@ def request_list(request_input):
 
 
 def main_check(secret):
+	# returns the amount of password leaks
 	hashed_secret = hashlib.sha1(str(secret).encode('utf-8')).hexdigest().upper()
 	api_res = request_list(hashed_secret[:5]).text
 	all_hashes = (line.split(':') for line in api_res.splitlines())
@@ -27,15 +30,16 @@ def symbol_add(symbol_type):
 
 
 def gen():
-    gen_tools = [string.ascii_lowercase, string.ascii_uppercase, string.digits] 
-    gen_length = randint(9, 12)
-    gen_pass = []
-    while len(gen_pass) < gen_length:
-        gen_pass.append(symbol_add(choice(gen_tools)))
-    return ''.join(gen_pass)
+	# password generator
+	gen_length = randint(9, 12)
+	gen_pass = []
+	while len(gen_pass) < gen_length:
+		gen_pass.append(symbol_add(choice([string.ascii_lowercase, string.ascii_uppercase, string.digits])))
+	return ''.join(gen_pass)
 
 
 while __name__ == '__main__':
+	# main loop
 	print('For password leak check type in "C" and press "Enter" or for generating new passwords type in "G" and press "Enter"')
 	task = input(': ').upper()
 	
@@ -60,6 +64,6 @@ while __name__ == '__main__':
 			break
 		check = main_check(input_console)
 		if check:
-			print(f'This password was leaked {check} times')
+			print(f'This password was leaked {check} time{"s" if int(check) > 1 else ""}')
 		else:
 			print('No leaks recorded')
