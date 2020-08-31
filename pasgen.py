@@ -25,16 +25,12 @@ def main_check(secret):
 	return 0
 
 
-def symbol_add(symbol_type):
-    return choice(symbol_type)
-
-
 def gen():
 	# password generator
 	gen_length = randint(9, 12)
 	gen_pass = []
 	while len(gen_pass) < gen_length:
-		gen_pass.append(symbol_add(choice([string.ascii_lowercase, string.ascii_uppercase, string.digits])))
+		gen_pass.append(choice(choice([string.ascii_lowercase, string.ascii_uppercase, string.digits])))
 	return ''.join(gen_pass)
 
 
