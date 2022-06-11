@@ -503,5 +503,5 @@ class ChangePasswordPage(tk.Frame):
 if __name__ == "__main__":
     app = App()
     app.resizable(width=False, height=False)
-    app.title("KeyHolder")
+    app.title("KeyMaster")
     app.mainloop()
