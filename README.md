@@ -1,6 +1,6 @@
 # Python Key Master
 <img border=0 src="https://img.shields.io/badge/python-3.8.1+-blue.svg?style=flat" alt="Python version"></a>
-[<a target="new" href="https://github.com/From3/Portfolio-Key_Master"><img border=0 src="https://img.shields.io/github/stars/From3/Portfolio-Key_Master.svg?style=social&label=Star&maxAge=60" alt="Star this repo"></a>](https://img.shields.io/github/stars/from3/portfolio-key_master?style=social)
+<a target="new" href="https://github.com/From3/Portfolio-Key_Master"><img border=0 src="https://img.shields.io/github/stars/From3/Portfolio-Key_Master.svg?style=social&label=Star&maxAge=60" alt="Star this repo"></a>
 
 **Key Master** is a lightweight application written in Python 3 that allows to:
 * generate passwords based on specified requirements
