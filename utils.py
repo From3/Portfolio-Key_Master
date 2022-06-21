@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*- #
+
 icons = {
     "Generator": chr(57526),
     "Manager": chr(57736),
