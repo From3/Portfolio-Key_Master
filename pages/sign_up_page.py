@@ -3,7 +3,7 @@
 
 import tkinter as tk
 from tkinter import ttk, messagebox
-import encryption_tools as et
+import tools.encryption_tools as et
 
 
 class SignUpPage(tk.Frame):

@@ -5,9 +5,9 @@ import pyperclip
 import webbrowser
 import tkinter as tk
 from tkinter import ttk, messagebox
-from utils import icons, helper_text
-import generator_tools as gt
-import encryption_tools as et
+from tools.utils import icons, helper_text
+import tools.generator_tools as gt
+import tools.encryption_tools as et
 
 
 class MainPage(tk.Frame):
