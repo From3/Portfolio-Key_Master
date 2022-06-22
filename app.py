@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- #
 
 import tkinter as tk
-from database import DataBase
+from tools.database import DataBase
 from pages.sign_up_page import SignUpPage
 from pages.login_page import LoginPage
 from pages.main_page import MainPage
