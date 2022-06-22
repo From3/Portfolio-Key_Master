@@ -20,3 +20,21 @@ or in case multiple Python versions are installed:
 ```
 pip3 install -r requirements.txt
 ```
+
+## Usage
+
+To use the app, run it from an IDE or a shell.
+
+Run the app from shell:
+```
+python app.py
+```
+or in case multiple Python versions are installed:
+```
+python3 app.py
+```
+---
+
+When running the app for the first time, it will ask to provide and confirm a master password which will be used in the future for loging in and encrypting/decrypting data. This password can be changed in app's `settings` tab.
+
+Delete `profiles.db` file from `app.py` dir to remove all profiles and master password.
