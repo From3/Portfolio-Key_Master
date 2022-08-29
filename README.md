@@ -5,7 +5,7 @@
 **Key Master** is a lightweight application written in Python 3 that allows to:
 * generate passwords based on specified requirements
 * check if provided passwords was ever leaked based on [Have I Been Pwned](https://haveibeenpwned.com/) API (which you can find out more about [here](https://haveibeenpwned.com/API/v3))
-* store usernames and passwords in SQLite database and copy it's contents from application to use it wherever needed
+* store encrypted usernames and passwords in SQLite database and copy it's contents from application to use it wherever needed
 
 ## Installation
 
@@ -37,4 +37,4 @@ python3 app.py
 
 When running the app for the first time, it will ask to provide and confirm a master password which will be used in the future for loging in and encrypting/decrypting data. This password can be changed in app's `settings` tab.
 
-Delete `profiles.db` file from `app.py` dir to remove all profiles and master password.
+Delete `profiles.db` file to remove all profiles and master password.
